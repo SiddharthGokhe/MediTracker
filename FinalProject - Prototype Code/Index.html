@@ -1,0 +1,385 @@
+<!-- 
+	File: Index.html
+	Description: Creates all of the pages for the MediTracker app
+	
+	Revision history:
+		Matt Allen 03/17/15: Created
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>MediTracker</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="css/themes/default/jquery.mobile-1.1.1.css" rel="stylesheet" type="text/css" />
+    	<link href="css/custom.css" rel="stylesheet" type="text/css" />
+    	<script src="js/jquery.js" type="text/javascript"></script>
+	    <script src="js/jquery.mobile-1.1.1.min.js" type="text/javascript"></script>
+	    <script src="js/geo.js" type="text/javascript"></script>
+	</head>
+	<body>
+		<div data-role="page"  id="Home" class="backgroundColor">
+			<header data-role="header">
+				<nav data-role="navbar">
+					<ul>
+						<li><a href="#Medications" data-theme="c">Medication</a></li>
+                        <li><a href="#Doctors" data-theme="c">Doctors</a></li>
+                        <li><a href="#Schedule" data-theme="c">Schedule</a></li>
+					</ul>
+				</nav>
+			</header>
+			
+			<section data-role="content">
+		        <h1 style="color: white">MediTracker</h1>
+                <h2 style="color: white">Track your medication</h2>
+		    </section>
+			
+			<footer id="footer" data-role="footer">
+				<h4>&copy; 2014</h4>
+			</footer>
+		</div>
+		
+		<div data-role="page" id="Medications" class="backgroundColor">
+			<header data-role="header">
+				<nav data-role="navbar">
+					<ul>
+						<li><a href="#Medications" style="color: gray !important" data-theme="c">Medication</a></li>
+                        <li><a href="#Doctors" data-theme="c">Doctors</a></li>
+                        <li><a href="#Schedule" data-theme="c">Schedule</a></li>
+					</ul>
+				</nav>
+			</header>
+			
+			<section data-role="content">
+		        <a href="#CreateMed">
+                    <button>Create New Medication</button>
+                </a>
+                <br><br>
+                <ul data-role="listview">
+                    <li data-role="list-divider">Aspirin</li>
+                    <li><a href="#ViewMed">View</a></li>
+                    <li><a href="#EditMed">Edit</a></li>
+                    <li><a href="#EditMed">Delete</a></li>
+                    <li data-role="list-divider">Tylenol</li>
+                    <li><a href="#ViewMed">View</a></li>
+                    <li><a href="#EditMed">Edit</a></li>
+                    <li><a href="#EditMed">Delete</a></li>
+                    <li data-role="list-divider">Benadryl</li>
+                    <li><a href="#ViewMed">View</a></li>
+                    <li><a href="#EditMed">Edit</a></li>
+                    <li><a href="#EditMed">Delete</a></li>
+                    <li data-role="list-divider">Pepto bismol</li>
+                    <li><a href="#ViewMed">View</a></li>
+                    <li><a href="#EditMed">Edit</a></li>
+                    <li><a href="#EditMed">Delete</a></li>
+                </ul>
+		    </section>
+			
+			<footer id="footer" data-role="footer">
+				<h4>&copy; 2014</h4>
+			</footer>
+		</div>
+        
+        <div data-role="page" id="CreateMed" class="backgroundColor">
+			<header data-role="header">
+				<nav data-role="navbar">
+					<ul>
+						<li><a href="#Medications" style="color: gray !important" data-theme="c">Medication</a></li>
+                        <li><a href="#Doctors" data-theme="c">Doctors</a></li>
+                        <li><a href="#Schedule" data-theme="c">Schedule</a></li>
+					</ul>
+				</nav>
+			</header>
+			
+			<section data-role="content" style="text-align: left">
+		        <label for="medName">Medication Name:</label>
+                <input type="text" id="medName">
+                <label>Medication Type:</label>
+                <input type="text">
+                <label>Units:</label><br>
+                <select>
+                    <option value="Gel Caps">Gel Caps</option>
+                    <option value="Pill Tablets">Pill Tablets</option>
+                    <option value="Drops">Drops</option>
+                    <option value="Liquids">Liquids</option>
+                </select>
+                <label for="checkRequired">Prescription Required?</label>
+                <input type="checkbox" id="checkRequired"><br>
+                <div data-role="controlgroup" data-type="horizontal">
+                    <a href="#Medications"><button>Save</button></a>
+                    <a href="#Medications"><button>Cancel</button></a>
+                </div>
+		    </section>
+			
+			<footer id="footer" data-role="footer">
+				<h4>&copy; 2014</h4>
+			</footer>
+		</div>
+        
+        <div data-role="page" id="ViewMed" class="backgroundColor">
+			<header data-role="header">
+				<nav data-role="navbar">
+					<ul>
+						<li><a href="#Medications" style="color: gray !important" data-theme="c">Medication</a></li>
+                        <li><a href="#Doctors" data-theme="c">Doctors</a></li>
+                        <li><a href="#Schedule" data-theme="c">Schedule</a></li>
+					</ul>
+				</nav>
+			</header>
+			
+			<section data-role="content" style="text-align: left">
+		        <label>Medication Name:</label><hr>
+                <label>Medication Type:</label><hr>
+                <label>Units:</label><br>
+                <select>
+                    <option value="Gel Caps">Gel Caps</option>
+                    <option value="Pill Tablets">Pill Tablets</option>
+                    <option value="Drops">Drops</option>
+                    <option value="Liquids">Liquids</option>
+                </select>
+                <label for="checkRequired">Prescription Required?</label>
+                <input type="checkbox" id="checkRequired"><br>
+                <a href="#Medications"><button>Back</button></a>
+		    </section>
+			
+			<footer id="footer" data-role="footer">
+				<h4>&copy; 2014</h4>
+			</footer>
+		</div>
+		
+		<div data-role="page" id="Doctors" class="backgroundColor">
+			<header data-role="header">
+				<nav data-role="navbar">
+					<ul>
+						<li><a href="#Medications" data-theme="c">Medication</a></li>
+                        <li><a href="#Doctors" style="color: gray !important" data-theme="c">Doctors</a></li>
+                        <li><a href="#Schedule" data-theme="c">Schedule</a></li>
+					</ul>
+				</nav>
+			</header>
+			
+			<section data-role="content">
+		        <a href="#CreateDoc">
+                    <button>Create New Doctor</button>
+                </a>
+                <br><br>
+                <ul data-role="listview">
+                    <li data-role="list-divider">Dr. E. Barsalou</li>
+                    <li><a href="#ViewDoc">View</a></li>
+                    <li><a href="#EditDoc">Edit</a></li>
+                    <li><a href="#EditDoc">Delete</a></li>
+                    <li data-role="list-divider">Dr. S. Hendriske</li>
+                    <li><a href="#ViewDoc">View</a></li>
+                    <li><a href="#EditDoc">Edit</a></li>
+                    <li><a href="#EditDoc">Delete</a></li>
+                    <li data-role="list-divider">Dr. R. Kozak</li>
+                    <li><a href="#ViewDoc">View</a></li>
+                    <li><a href="#EditDoc">Edit</a></li>
+                    <li><a href="#EditDoc">Delete</a></li>
+                    <li data-role="list-divider">Dr. M. Tanuan</li>
+                    <li><a href="#ViewDoc">View</a></li>
+                    <li><a href="#EditDoc">Edit</a></li>
+                    <li><a href="#EditDoc">Delete</a></li>
+                </ul>
+		    </section>
+			
+			<footer id="footer" data-role="footer">
+				<h4>&copy; 2014</h4>
+			</footer>
+		</div>
+		
+        <div data-role="page" id="CreateDoc" class="backgroundColor">
+			<header data-role="header">
+				<nav data-role="navbar">
+					<ul>
+						<li><a href="#Medications" data-theme="c">Medication</a></li>
+                        <li><a href="#Doctors" style="color: gray !important" data-theme="c">Doctors</a></li>
+                        <li><a href="#Schedule" data-theme="c">Schedule</a></li>
+					</ul>
+				</nav>
+			</header>
+			
+			<section data-role="content">
+                <div style="text-align: left">
+                    <label for="docFirstName">First Name:</label>
+                    <input type="text" id="docFirstName">
+                    <label for="docLastName">Last Name:</label>
+                    <input type="text" id="docLastName">
+                    <label for="docPhone">Phone Number:</label>
+                    <input type="text" id="docPhone">
+                    <label for="docEmail">Email Address:</label>
+                    <input type="text" id="docEmail">
+                    <label for="docAddress">Home Address:</label>
+                    <input type="text" id="docAddress">
+                </div>
+                <div data-role="controlgroup" data-type="horizontal">
+                    <a href="#Doctors"><button>Save</button></a>
+                    <a href="#Doctors"><button>Cancel</button></a>
+                </div>
+		    </section>
+			
+			<footer id="footer" data-role="footer">
+				<h4>&copy; 2014</h4>
+			</footer>
+		</div>
+        
+        <div data-role="page" id="ViewDoc" class="backgroundColor">
+			<header data-role="header">
+				<nav data-role="navbar">
+					<ul>
+						<li><a href="#Medications" data-theme="c">Medication</a></li>
+                        <li><a href="#Doctors" style="color: gray !important" data-theme="c">Doctors</a></li>
+                        <li><a href="#Schedule" data-theme="c">Schedule</a></li>
+					</ul>
+				</nav>
+			</header>
+			
+			<section data-role="content">
+		        <div style="text-align: left">
+                    <label for="docFirstName">First Name:</label><hr>
+                    <label for="docLastName">Last Name:</label><hr>
+                    <label for="docPhone">Phone Number:</label><hr>
+                    <label for="docEmail">Email Address:</label><hr>
+                    <label for="docAddress">Home Address:</label>
+                </div>
+                <a href="#Doctors"><button>Back</button></a>
+		    </section>
+			
+			<footer id="footer" data-role="footer">
+				<h4>&copy; 2014</h4>
+			</footer>
+		</div>
+        
+        <div data-role="page" id="Schedule" class="backgroundColor">
+			<header data-role="header">
+				<nav data-role="navbar">
+					<ul>
+						<li><a href="#Medications" data-theme="c">Medication</a></li>
+                        <li><a href="#Doctors" data-theme="c">Doctors</a></li>
+                        <li><a href="#Schedule" style="color: gray !important" data-theme="c">Schedule</a></li>
+					</ul>
+				</nav>
+			</header>
+			
+			<section data-role="content">
+		        <a href="#CreateEntry">
+                    <button>Create New Entry</button>
+                </a>
+                <br><br>
+                <ul data-role="listview">
+                    <li data-role="list-divider">Asprin - 2:00 03/10/15</li>
+                    <li><a href="#ViewEntry">View</a></li>
+                    <li><a href="#EditEntry">Edit</a></li>
+                    <li><a href="#EditEntry">Delete</a></li>
+                    <li data-role="list-divider">Tylenol - 17:00 03/15/15</li>
+                    <li><a href="#ViewEntry">View</a></li>
+                    <li><a href="#EditEntry">Edit</a></li>
+                    <li><a href="#EditEntry">Delete</a></li>
+                    <li data-role="list-divider">Benadryl - 21:30 03/20/15</li>
+                    <li><a href="#ViewEntry">View</a></li>
+                    <li><a href="#EditEntry">Edit</a></li>
+                    <li><a href="#EditEntry">Delete</a></li>
+                    <li data-role="list-divider">Pepto bismal - 11:00 03/25/15</li>
+                    <li><a href="#ViewEntry">View</a></li>
+                    <li><a href="#EditEntry">Edit</a></li>
+                    <li><a href="#EditEntry">Delete</a></li>
+                </ul>
+		    </section>
+			
+			<footer id="footer" data-role="footer">
+				<h4>&copy; 2014</h4>
+			</footer>
+		</div>
+        
+        <div data-role="page" id="ViewEntry" class="backgroundColor">
+			<header data-role="header">
+				<nav data-role="navbar">
+					<ul>
+						<li><a href="#Medications" data-theme="c">Medication</a></li>
+                        <li><a href="#Doctors" data-theme="c">Doctors</a></li>
+                        <li><a href="#Schedule" style="color: gray !important" data-theme="c">Schedule</a></li>
+					</ul>
+				</nav>
+			</header>
+			
+			<section data-role="content">
+                <div style="text-align: left">
+                    <label>Medication:</label><hr>
+                    <label>Doctor:</label><hr>
+                    <label>Units:</label>
+                    <div data-role="controlgroup" data-type="horizontal">
+                        <select>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                        <select>
+                            <option value="Gel Caps">Gel Caps</option>
+                            <option value="Pill Tablets">Pill Tablets</option>
+                            <option value="Drops">Drops</option>
+                            <option value="ml">ml</option>
+                        </select>
+                    </div>
+                    <a href="#Schedule"><button>Back</button></a>
+                </div>
+		    </section>
+			
+			<footer id="footer" data-role="footer">
+				<h4>&copy; 2014</h4>
+			</footer>
+		</div>
+        
+        <div data-role="page" id="CreateEntry" class="backgroundColor">
+			<header data-role="header">
+				<nav data-role="navbar">
+					<ul>
+						<li><a href="#Medications" data-theme="c">Medication</a></li>
+                        <li><a href="#Doctors" data-theme="c">Doctors</a></li>
+                        <li><a href="#Schedule" style="color: gray !important" data-theme="c">Schedule</a></li>
+					</ul>
+				</nav>
+			</header>
+			
+			<section data-role="content">
+		        <div style="text-align: left">
+                    <label>Medication:</label><br>
+                    <select>
+                        <option value="Asprin">Asprin</option>
+                        <option value="Tylenol">Tylenol</option>
+                        <option value="Benadryl">Benadryl</option>
+                        <option value="Pepto bismal">Pepto bismal</option>
+                    </select>
+                    <label>Doctor:</label><br>
+                    <select>
+                        <option value="Barsalou">Dr. E. Barsalou</option>
+                        <option value="Hendriske">Dr. S. Hendriske</option>
+                        <option value="Kozak">Dr. R. Kozak</option>
+                        <option value="Tanuan">Dr. M. Tanuan</option>
+                    </select>
+                    <label>Units:</label>
+                    <div data-role="controlgroup" data-type="horizontal">
+                        <select>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                        <select>
+                            <option value="Gel Caps">Gel Caps</option>
+                            <option value="Pill Tablets">Pill Tablets</option>
+                            <option value="Drops">Drops</option>
+                            <option value="ml">ml</option>
+                        </select>
+                    </div>
+                    <a href="#Schedule"><button>Back</button></a>
+                </div>
+		    </section>
+			
+			<footer id="footer" data-role="footer">
+				<h4>&copy; 2014</h4>
+			</footer>
+		</div>
+	</body>
+</html>

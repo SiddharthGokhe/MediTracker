@@ -1,0 +1,48 @@
+/*  File: custom.css
+ *	Description: Creates a custom css to 
+ *  overide the JQuery one for the MediTracker app
+ *	
+ *	Revision history:
+ *		Matt Allen 03/17/15: Created 
+ */
+
+.backgroundColor
+{
+    background: #f20000;
+}
+
+a,
+.ui-btn
+{
+    color: red !important;
+    text-decoration: none !important;
+}
+
+a:active,
+a:focus,
+.ui-btn-active
+{
+    background: #ebebeb;
+    text-shadow: none;
+}
+
+section
+{
+    text-align: center;
+}
+
+label
+{
+    color: white;
+}
+
+#footer
+{ 
+	position: fixed;
+	width: 100%;
+	bottom: 0pt;
+	left: 0pt; 
+    background: #ebebeb;
+    color: red;
+    text-shadow: none;
+}
